@@ -39,6 +39,7 @@ docker build $BUILD_DIR --force-rm -t $REPO_URL:$VERSION
 ```
 DIR=/home/user/my_working_dir
 REPO_URL=palmoreck/r_geospatial_ie #this REPO_RUL is provisional
+VERSION=v1
 CONTAINER_NAME=r-geospatial-ie
 PASSWORD=mypassword
 PORT=8787
