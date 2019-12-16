@@ -37,7 +37,7 @@ docker build $BUILD_DIR --force-rm -t $REPO_URL:$VERSION
 
 
 ```
-DIR=/home/user/my_working_dir
+DIR=/home/user/my_working_dir #this path will be mapped to `/home/rstudio`
 REPO_URL=palmoreck/r_geospatial_ie #this REPO_RUL is provisional
 VERSION=v1
 CONTAINER_NAME=r-geospatial-ie
@@ -48,7 +48,7 @@ PORT=8787
 2) Run docker image:
 
 ```
-docker run -d -p $PORT:8787 -v $DIR:/home/rstudio/ --name $CONTAINER_NAME -e PASSWORD=$PASSWORD $REPO_URL:$VERSION 
+docker run --rm -d -p $PORT:8787 -v $DIR:/home/rstudio/ --name $CONTAINER_NAME -e PASSWORD=$PASSWORD $REPO_URL:$VERSION 
 ```
 
 
@@ -57,3 +57,13 @@ docker run -d -p $PORT:8787 -v $DIR:/home/rstudio/ --name $CONTAINER_NAME -e PAS
 ```
 localhost:8787
 ``` 
+
+`user:rstudio`
+
+**Note: you can stop docker container with:**
+
+```
+docker stop $CONTAINER_NAME
+```
+
+**Beware: if you stop it and you didn't saved your work under `/home/rstudio` you will lose your work :(**
