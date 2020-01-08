@@ -21,7 +21,7 @@ cd ie-docker
 ```
 BUILD_DIR=3.6.1
 CONTAINER_NAME=r-geospatial-ie
-REPO_URL=palmoreck/r_geospatial_ie #this REPO_RUL is provisional
+REPO_URL=palmoreck/r_geospatial_ie #this REPO_URL is provisional
 VERSION=v1 #first version of docker image for ie
 ```
 
